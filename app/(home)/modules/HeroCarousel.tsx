@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect } from "react";
+import { Overlay } from "@/components/Overlay";
 
-
-const images = ["/parapija.jpg", "/hero2.png", "/hero3.png"];
+const images = ["/parapija.jpg", "/hero2.jpg", "/hero3.jpg"];
 
 export const HeroCarousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
@@ -17,7 +17,7 @@ export const HeroCarousel = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       handleImageChange((currentImageIndex + 1) % images.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(intervalId);
   }, [currentImageIndex]);
@@ -44,6 +44,8 @@ export const HeroCarousel = () => {
           </div>
         ))}
       </div>
+
+      <Overlay />
     </>
   );
 };

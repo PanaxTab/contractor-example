@@ -1,23 +1,24 @@
 import { Container } from "@/components/Container";
+import { SectionName } from "@/components/SectionName";
 import Link from "next/link";
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-
 export const Services = () => {
   return (
     <section>
         <Container>
+            <SectionName name="Services"></SectionName>
             <div className="grid grid-cols-1 md:grid-cols-3 text-white ">
                 {data.map((item,index)=>{
                     const isSecondItem = index === 1
 
                     return <div key={item.title} className={`flex flex-col justify-between px-4 md:px-8 py-8 md:py-4 space-y-12  ${isSecondItem ? "bg-white text-black":"bg-primary"}`}>
-                        <h3>
+                        <h4>
                             0{index+1}.
-                        </h3>
-                        <h3>
+                        </h4>
+                        <h4>
                             {item.title}
-                        </h3>
+                        </h4>
                         <p>
                             {item.description}
                         </p>
@@ -28,7 +29,7 @@ export const Services = () => {
                                 </button>
                             </Link>
                             <div className={`relative rounded-lg w-16 h-full border-2 ${isSecondItem ? "bg-primary border-primary": "bg-white border-white"}`}>
-
+                                <div className={`absolute w-full h-full right-2 bottom-2  ${isSecondItem ? "bg-white":"bg-primary"}`}></div>
                             </div>
                         </div>
                     </div>

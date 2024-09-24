@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Overlay } from '@/components/Overlay'
 import { Container } from '@/components/Container'
-
+import { Breadcrumbs } from '@/components/Breadcrumbs'
 export const Banner = () => {
   return (
     <div className="relative w-full h-[260px] md:h-[300px]">
@@ -11,7 +11,7 @@ export const Banner = () => {
 
         <div className="absolute bottom-4 left-0 w-full h-auto">
             <Container>
-                something
+              <Breadcrumbs />
             </Container>
         </div>
     </div>

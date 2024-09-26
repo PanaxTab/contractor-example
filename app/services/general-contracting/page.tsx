@@ -11,6 +11,7 @@ export default function GeneralContracting(){
 
 const data={
     title:"GENERAL CONTRACTING",
+    subtitle:"We perform the function of a general contractor, we are responsible for overseeing and managing all aspects of the construction process. This includes coordinating with subcontractors, ensuring compliance with safety regulations, obtaining necessary permits, managing the project timeline, and ensuring that the work is completed on time and within budget.",
     image:"/hero.jpg",
     description:(
         <>

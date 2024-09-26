@@ -13,10 +13,11 @@ interface ServicePageContentProps {
     title: string;
     description: string | ReactNode;
     image: string;
+    subtitle:string;
 }
 
 
-export const ServicePageContent = ({ title, description, image }: ServicePageContentProps) => {
+export const ServicePageContent = ({ title, description, image,subtitle }: ServicePageContentProps) => {
     return (
         <>
             <Banner />
@@ -24,6 +25,7 @@ export const ServicePageContent = ({ title, description, image }: ServicePageCon
             <SectionSplit>
                 <Container>
                     <h1 className="mb-8">{title}</h1>
+                    <p className="mb-8">{subtitle}</p>
                     <div className="grid grid-cols-1 md:grid-cols-[0.35fr_0.65fr]">
                         <div className="relative h-96 md:h-full">
                             <Image src={image} alt="service-image" fill className="object-cover"/>

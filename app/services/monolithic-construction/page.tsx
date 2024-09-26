@@ -11,6 +11,7 @@ export default function RenovationAndRestoration(){
 
 const data={
     title:"MONOLITHIC CONSTRUCTION",
+    subtitle:"We specialize in monolithic constructions, utilizing advanced techniques and materials to create seamless, durable structures. Our expertise includes the design and execution of large-scale, single-pour concrete projects that offer superior strength, stability, and longevity",
     image:"/hero3.jpg",
     description:(
         <>

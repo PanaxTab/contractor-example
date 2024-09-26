@@ -11,6 +11,7 @@ export default function RenovationAndRestoration(){
 
 const data={
     title:"RENOVATION AND RESTORATION",
+    subtitle:"We offer services for renovation and restoration of residential, commercial, and historical properties. Our expertise includes everything from modernizing interiors, upgrading electrical and plumbing systems, and improving energy efficiency, to restoring original architectural features and preserving the historical integrity of older buildings. ",
     image:"/hero2.jpg",
     description:(
         <>

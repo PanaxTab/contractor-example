@@ -2,6 +2,7 @@
 import { usePathname } from 'next/navigation'
 import React from 'react'
 import Link from 'next/link';
+import { Route } from '@/types/route';
 
 
 export const Breadcrumbs = () => {
@@ -11,11 +12,17 @@ export const Breadcrumbs = () => {
     paths.forEach((path,index)=>{
         paths[index] = path.replace(/-/g," ");
     })
+
+    if(Number.isInteger(Number(paths[paths.length-1])))
+    {
+        paths.pop();
+    }
+
     return(
         <nav>
             <ol className="flex items-center space-x-2 text-sm">
                 <li>
-                    <Link href="/" className='text-white'>Home</Link>
+                    <Link href={Route.HOME} className='text-white'>Home</Link>
                 </li>
                     {paths.map((path,index)=>{
                         const href = `/${paths.slice(0,index+1).join('/')}`;

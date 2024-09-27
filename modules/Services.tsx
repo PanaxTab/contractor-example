@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { SectionName } from "@/components/SectionName";
+import { Route } from "@/types/route";
 import Link from "next/link";
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
@@ -44,17 +45,17 @@ export const Services = () => {
 const data = [
     {
         title:"GENERAL CONTRACTING",
-        href:"services/general-contracting",
+        href:Route.GENERAL_CONTACTING,
         description:"We offer a full range of general contracting services, from pre-construction to project closeout."
     },
     {
         title:"RENOVATION AND RESTORATION",
-        href:"services/renovation-and-restoration",
+        href:Route.RENOVATION_AND_RESTORATION,
         description:"We specialize in renovation and restoration projects, including historical renovations."
     },
     {
         title:"MONOLITHIC CONSTRUCTION",
-        href:"services/monolithic-construction",
+        href:Route.MONOLITHIC_CONSTRUCTION,
         description:"We are experts in monolithic construction, offering innovative solutions for complex projects"
     },
 ]

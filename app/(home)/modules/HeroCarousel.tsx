@@ -7,6 +7,8 @@ const images = ["/parapija.jpg", "/hero2.jpg", "/hero3.jpg"];
 
 export const HeroCarousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+  const [offset,setOffset] = React.useState(0);
+  const containerRef = React.useRef<HTMLDivElement | null>(null)
 
   const handleImageChange = (newIndex: number) => {
     if (newIndex !== currentImageIndex) {
@@ -22,6 +24,20 @@ export const HeroCarousel = () => {
     return () => clearInterval(intervalId);
   }, [currentImageIndex]);
 
+  useEffect(()=>{
+    if(containerRef.current){
+      const speed =0.5;
+      containerRef.current.style.transform = `translateY(${offset*speed}px)`
+    }
+  },[])
+
+  useEffect(()=>{
+    const handleScroll = () => {setOffset(window.scrollY)};
+    window.addEventListener('scroll',handleScroll);
+
+    return () => window.removeEventListener("scroll",handleScroll);
+  },[])
+  
   return (
     <>
       <div className="absolute inset-0 overflow-hidden">

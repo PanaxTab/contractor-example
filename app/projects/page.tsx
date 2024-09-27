@@ -5,7 +5,7 @@ import Link from "next/link"
 import React from "react"
 import { Projects as Project } from "./components/Projects"
 import { Filtering } from "./components/Filtering"
-import { SearchParams } from "@/types/route"
+import { Route, SearchParams } from "@/types/route"
 import { PaginationControl } from "./components/PaginationControl"
 
 export default function ProjectsPage(
@@ -50,7 +50,7 @@ export default function ProjectsPage(
                     <Filtering years={years} locations={locations} />
                     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12">
                         {PaginatedProjects.map((project) => (
-                            <Link href={`/projects/${project.id}`} key={project.title}>
+                            <Link href={`${Route.PROJECTS}/${project.id}`} key={project.id}>
                                 <Project {...project} />
                             </Link>
                         ))}
@@ -71,13 +71,14 @@ export default function ProjectsPage(
     )
 }
 
-const projects = [
+export const projects = [
     {
         id: 1,
         title: "Project 1",
         year: 2021,
         location: "Lemesos",
         images: ["/hero.jpg"],
+        description:"Short description for Project 1",
     },
     {
         id: 2,
@@ -85,6 +86,7 @@ const projects = [
         year: 2020,
         location: "Nicosia",
         images: ["/hero2.jpg"],
+        description:"Short description for Project 2",
     },
     {
         id: 3,
@@ -92,6 +94,7 @@ const projects = [
         year: 2023,
         location: "Pafos",
         images: ["/hero3.jpg"],
+        description:"Short description for Project 3",
     },
     {
         id: 4,
@@ -99,6 +102,7 @@ const projects = [
         year: 2021,
         location: "Lemesos",
         images: ["/hero.jpg"],
+        description:"Short description for Project 4",
     },
     {
         id: 5,
@@ -106,6 +110,7 @@ const projects = [
         year: 2020,
         location: "Nicosia",
         images: ["/hero2.jpg"],
+        description:"Short description for Project 5",
     },
     {
         id: 6,
@@ -113,6 +118,7 @@ const projects = [
         year: 2023,
         location: "Pafos",
         images: ["/hero3.jpg"],
+        description:"Short description for Project 6",
     },
     {
         id: 7,
@@ -120,6 +126,7 @@ const projects = [
         year: 2021,
         location: "Lemesos",
         images: ["/hero.jpg"],
+        description:"Short description for Project 9",
     },
     {
         id: 8,
@@ -127,6 +134,7 @@ const projects = [
         year: 2020,
         location: "Nicosia",
         images: ["/hero2.jpg"],
+        description:"Short description for Project 10",
     },
     {
         id: 9,
@@ -134,6 +142,7 @@ const projects = [
         year: 2023,
         location: "Pafos",
         images: ["/hero3.jpg"],
+        description:"Short description for Project 11",
     },
     {
         id: 10,
@@ -141,6 +150,7 @@ const projects = [
         year: 2021,
         location: "Lemesos",
         images: ["/hero.jpg"],
+        description:"Short description for Project 12",
     },
     {
         id: 11,
@@ -148,6 +158,7 @@ const projects = [
         year: 2020,
         location: "Nicosia",
         images: ["/hero2.jpg"],
+        description:"Short description for Project 13",
     },
     {
         id: 12,
@@ -155,5 +166,6 @@ const projects = [
         year: 2023,
         location: "Pafos",
         images: ["/hero3.jpg"],
+        description:"Short description for Project 14",
     },
 ]

@@ -6,12 +6,16 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet-defaulticon-compatibility";
 
-const position: [number, number] = [34.710203, 33.127101];
+interface MapProps{
+  longitude:number,
+  latitude:number,
+}
 
-export const Map = () => {
+
+export const Map = ({longitude,latitude}:MapProps) => {
   return (
     <MapContainer 
-      center={position} 
+      center={[longitude,latitude]} 
       zoom={13} 
       scrollWheelZoom={true} 
       className="h-96 w-full">
@@ -19,7 +23,7 @@ export const Map = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position}></Marker>
+        <Marker position={[longitude,latitude]}></Marker>
     </MapContainer>
   );
 };

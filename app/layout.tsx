@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import { Footer } from "@/modules/Footer";
 import {Inter} from "next/font/google";
 import "./globals.css";
+import { NavigationDesktop } from "./(home)/modules/Nav/NavigationDesktop";
+import { NavigationMobile } from "./(home)/modules/Nav/NavigationMobile";
 
 const inter = Inter({subsets:["latin"]});
 
@@ -29,9 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <NavigationDesktop/>
+        <NavigationMobile/>
         {children}
         <Footer />
       </body>

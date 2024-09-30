@@ -29,7 +29,7 @@ export const HeroCarousel = () => {
       const speed =0.5;
       containerRef.current.style.transform = `translateY(${offset*speed}px)`
     }
-  },[])
+  },[offset])
 
   useEffect(()=>{
     const handleScroll = () => {setOffset(window.scrollY)};
@@ -40,7 +40,7 @@ export const HeroCarousel = () => {
   
   return (
     <>
-      <div className="absolute inset-0 overflow-hidden">
+      <div ref={containerRef} className="absolute inset-0 overflow-hidden">
         {images.map((img, index) => (
           <div
             key={img}
@@ -49,6 +49,9 @@ export const HeroCarousel = () => {
                 ? "opacity-100 scale-105"
                 : "opacity-0 scale-100"
             }`}
+            style={{
+              transform: `translateY(${(index-currentImageIndex)*5}%',)`,
+            }}
           >
             <Image
               src={img}
@@ -62,7 +65,7 @@ export const HeroCarousel = () => {
       </div>
 
       <Overlay />
-      <div className="absolute right-4 bottom-4 z-50">
+      <div className="absolute right-4 bottom-4 z-40">
         <div className="flex gap2">
           {images .map((img,i)=>(
               <button 

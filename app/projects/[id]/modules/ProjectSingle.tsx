@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { title } from 'process'
 import React from 'react'
 import { LabelWithIconColor } from '../components/LabelWithIconColor';
+import { Map } from '@/components/Map';
 
 interface ProjectSingleProps{
     title:string,
@@ -13,9 +14,11 @@ interface ProjectSingleProps{
     description:string | string[],
     location:string,
     year:number
+    longitude:number,
+    latitude:number,
 }
 
-export const ProjectSingle = ({title,images,description,location,year}:ProjectSingleProps) => {
+export const ProjectSingle = ({title,images,description,location,year,longitude,latitude}:ProjectSingleProps) => {
   return (
     <section>
         <Container>
@@ -39,6 +42,7 @@ export const ProjectSingle = ({title,images,description,location,year}:ProjectSi
                     text={year}
                 />
             </div>
+            <Map longitude={longitude} latitude={latitude}/>
         </Container>
     </section>
   )

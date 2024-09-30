@@ -79,6 +79,8 @@ export const projects = [
         location: "Lemesos",
         images: ["/hero.jpg"],
         description:"Short description for Project 1",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 2,
@@ -87,6 +89,8 @@ export const projects = [
         location: "Nicosia",
         images: ["/hero2.jpg"],
         description:"Short description for Project 2",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 3,
@@ -95,6 +99,8 @@ export const projects = [
         location: "Pafos",
         images: ["/hero3.jpg"],
         description:"Short description for Project 3",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 4,
@@ -103,6 +109,8 @@ export const projects = [
         location: "Lemesos",
         images: ["/hero.jpg"],
         description:"Short description for Project 4",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 5,
@@ -111,6 +119,8 @@ export const projects = [
         location: "Nicosia",
         images: ["/hero2.jpg"],
         description:"Short description for Project 5",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 6,
@@ -119,6 +129,8 @@ export const projects = [
         location: "Pafos",
         images: ["/hero3.jpg"],
         description:"Short description for Project 6",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 7,
@@ -127,6 +139,8 @@ export const projects = [
         location: "Lemesos",
         images: ["/hero.jpg"],
         description:"Short description for Project 9",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 8,
@@ -135,6 +149,8 @@ export const projects = [
         location: "Nicosia",
         images: ["/hero2.jpg"],
         description:"Short description for Project 10",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 9,
@@ -143,6 +159,8 @@ export const projects = [
         location: "Pafos",
         images: ["/hero3.jpg"],
         description:"Short description for Project 11",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 10,
@@ -151,6 +169,8 @@ export const projects = [
         location: "Lemesos",
         images: ["/hero.jpg"],
         description:"Short description for Project 12",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 11,
@@ -159,6 +179,8 @@ export const projects = [
         location: "Nicosia",
         images: ["/hero2.jpg"],
         description:"Short description for Project 13",
+        longitude:34.710203,
+        latitude:33.127101,
     },
     {
         id: 12,
@@ -167,5 +189,7 @@ export const projects = [
         location: "Pafos",
         images: ["/hero3.jpg"],
         description:"Short description for Project 14",
+        longitude:34.710203,
+        latitude:33.127101,
     },
 ]
